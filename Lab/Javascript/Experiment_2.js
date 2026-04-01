@@ -8,152 +8,181 @@
 // 8. function to find even or odd
 // 9. write code for sum of array
 
+// ================= ACTIVITY 1 =================
+console.log("===== Activity 1 : Basic Types & Functions =====");
+document.writeln("<h3>Activity 1 : Basic Types & Functions</h3>");
 
-/******************* Activity 1 *******************/
-console.log("\nActivity 1 :");
+let myArray = [11, 22, 33, 44];
+console.log("Array:", myArray);
+document.writeln("Array: " + myArray + "<br>");
 
-//Array
-let myArray = [11 ,22, 33, 44];
-console.log(`Array : ${myArray}`);
-
-//String
 let myString1 = "Tahir";
 let myString2 = new String("abcd");
-console.log(`String1 : ${myString1}`);
-console.log(`String2 : ${myString2}`);
 
-//Functiion
-function myFun(){
-    console.log("My function called");
-    
+console.log("String1:", myString1);
+console.log("String2:", myString2);
+
+document.writeln("String1: " + myString1 + "<br>");
+document.writeln("String2: " + myString2 + "<br>");
+
+function myFun() {
+  console.log("My function called");
+  document.writeln("My function called<br>");
 }
 
-function add(num1, num2){
-    return num1+num2;
+function add(num1, num2) {
+  return num1 + num2;
 }
+
 myFun();
-console.log(`Add 5+7 : ${add(5,7)}`);  
 
+console.log("Add 5 + 7 =", add(5, 7));
+document.writeln("Add 5 + 7 = " + add(5, 7) + "<br><br>");
 
-/******************* Activity 2 *******************/
-console.log("\nActivity 2 :");
+// ================= ACTIVITY 2 =================
+console.log("\n===== Activity 2 : Max in Array =====");
+document.writeln("<h3>Activity 2 : Max in Array</h3>");
 
-let array = [21 ,15, 25, 30, 8]
-let max = array[0]
-for(let i=1; i<array.length; i++){
-    if(max <= array[i])
-        max = array[i];
+let array = [21, 15, 25, 30, 8];
+let max = array[0];
+
+for (let i = 1; i < array.length; i++) {
+  if (max < array[i]) {
+    max = array[i];
+  }
 }
-console.log(`Max of [${array}] is ${max}`);
 
+console.log("Array:", array);
+console.log("Max:", max);
 
-/******************* Activity 3 *******************/
-console.log("\nActivity 3:");
+document.writeln("Array: " + array + "<br>");
+document.writeln("Max value: " + max + "<br><br>");
+
+// ================= ACTIVITY 3 =================
+console.log("\n===== Activity 3 : Reverse String =====");
+document.writeln("<h3>Activity 3 : Reverse String</h3>");
 
 let str = "1234567";
 let revStr = "";
-let j=str.length-1;
 
-while(j>=0){
-    revStr +=str[j];
-    j--;
+for (let i = str.length - 1; i >= 0; i--) {
+  revStr += str[i];
 }
-console.log(`String : ${str}\nReversed string : ${revStr}`);
 
+console.log("Original:", str);
+console.log("Reversed:", revStr);
 
-/******************* Activity 4 *******************/
-console.log("\nActivity 4:");
+document.writeln("Original: " + str + "<br>");
+document.writeln("Reversed: " + revStr + "<br><br>");
+
+// ================= ACTIVITY 4 =================
+console.log("\n===== Activity 4 : Palindrome Check =====");
+document.writeln("<h3>Activity 4 : Palindrome Check</h3>");
 
 let str2 = "abcba";
 let revStr2 = "";
-let k=str2.length-1;
 
-while(k>=0){
-    revStr2 +=str2[k];
-    k--;
-}
-console.log(`${str2}`);
-
-if(str2 == revStr2){
-    console.log("String is palindrome");
-
-}else{
-    console.log("String is not palindrome");
+for (let i = str2.length - 1; i >= 0; i--) {
+  revStr2 += str2[i];
 }
 
+console.log("String:", str2);
 
-/******************* Activity 5 *******************/
-console.log("\nActivity 5:");
+document.writeln("String: " + str2 + "<br>");
+
+if (str2 === revStr2) {
+  console.log("Palindrome");
+  document.writeln("Palindrome<br><br>");
+} else {
+  console.log("Not Palindrome");
+  document.writeln("Not Palindrome<br><br>");
+}
+
+// ================= ACTIVITY 5 =================
+console.log("\n===== Activity 5 : Fibonacci Series =====");
+document.writeln("<h3>Activity 5 : Fibonacci Series</h3>");
+
 let n = 10;
-let previous = 0, current = 1;
+let previous = 0,
+  current = 1;
 
-for(let i=0; i<n; i++){
-    console.log(previous);
-    let sum = previous + current;
-    
-    previous = current;
-    current = sum;
+for (let i = 0; i < n; i++) {
+  console.log(previous);
+  document.writeln(previous + " ");
+
+  let sum = previous + current;
+  previous = current;
+  current = sum;
 }
+document.writeln("<br><br>");
 
-/******************* Activity 6 *******************/
-console.log("\nActivity 6:");
+// ================= ACTIVITY 6 =================
+console.log("\n===== Activity 6 : Count Vowels =====");
+document.writeln("<h3>Activity 6 : Count Vowels</h3>");
+
 let str3 = "azezizoz";
 let vowels = "aeiouAEIOU";
 let countV = 0;
 
-for(let i=0; i<str3.length; i++){
-    if(vowels.includes(str3[i]))
-        countV++;
-}
-console.log(`String : ${str3}\nNo. of vowels :${countV}`);
-
-
-/******************* Activity 7 *******************/
-console.log("\nActivity 7:");
-const numbers = [10,20,20,10,40];
-console.log(`Array : ${numbers}`);
-//method 1
-// let unique = [];
-// let x = numbers[0];
-// for(let i=0; i<numbers.length; i++){
-//     if(!unique.includes(numbers[i])){
-//         unique.push(numbers[i]);
-//     }
-// }
-// console.log(`Array : ${numbers}\nUnique array : ${unique}`);
-
-//method 2
-for(let i=0; i<numbers.length; i++){
-    for(let j=i+1; j<numbers.length; j++){
-        if(numbers[i] == numbers[j]){
-            numbers.splice(j,1);
-            j--;
-        }
-    }
-}
-console.log(`Unique array : ${numbers}`);
-
-/******************* Activity 8 *******************/
-console.log("\nActivity 8:");
-function findEvenOrOdd(num){
-    if(num % 2 == 0){
-        console.log(`${num} is even`);
-    }else{
-        console.log(`${num} is odd`);
-    }      
+for (let i = 0; i < str3.length; i++) {
+  if (vowels.includes(str3[i])) {
+    countV++;
+  }
 }
 
-findEvenOrOdd(7);
+console.log("String:", str3);
+console.log("Vowels:", countV);
 
-/******************* Activity 9 *******************/
-console.log("\nActivity 9:");
-const numbers2 = [15, 10, 5 ,20]
+document.writeln("String: " + str3 + "<br>");
+document.writeln("No. of vowels: " + countV + "<br><br>");
+
+// ================= ACTIVITY 7 =================
+console.log("\n===== Activity 7 : Unique Array =====");
+document.writeln("<h3>Activity 7 : Unique Array</h3>");
+
+const numbers = [10, 20, 20, 10, 40];
+let unique = [];
+
+for (let i = 0; i < numbers.length; i++) {
+  if (!unique.includes(numbers[i])) {
+    unique.push(numbers[i]);
+  }
+}
+
+console.log("Original:", numbers);
+console.log("Unique:", unique);
+
+document.writeln("Original: " + numbers + "<br>");
+document.writeln("Unique: " + unique + "<br><br>");
+
+// ================= ACTIVITY 8 =================
+console.log("\n===== Activity 8 : Even or Odd =====");
+document.writeln("<h3>Activity 8 : Even or Odd</h3>");
+
+function findEvenOrOdd(num) {
+  if (num % 2 === 0) {
+    return "Even";
+  } else {
+    return "Odd";
+  }
+}
+
+console.log("7 is", findEvenOrOdd(7));
+document.writeln("7 is " + findEvenOrOdd(7) + "<br><br>");
+
+// ================= ACTIVITY 9 =================
+console.log("\n===== Activity 9 : Sum of Array =====");
+document.writeln("<h3>Activity 9 : Sum of Array</h3>");
+
+const numbers2 = [15, 10, 5, 20];
 let sum = 0;
 
-for(let num of numbers2){
-    sum+=num;
+for (let num of numbers2) {
+  sum += num;
 }
-console.log(`Array : ${numbers2}\nSum: ${sum}`);
 
-        
+console.log("Array:", numbers2);
+console.log("Sum:", sum);
 
+document.writeln("Array: " + numbers2 + "<br>");
+document.writeln("Sum: " + sum + "<br>");

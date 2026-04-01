@@ -1,12 +1,12 @@
 //Number -> String
 let num = 33;
-let numString = String(num)
+let numString = String(num);
 console.log(numString);
-console.log(typeof (numString));
+console.log(typeof numString);
 
 //String ->Number
-let str = "100"
-let strNum = Number(str)
+let str = "100";
+let strNum = Number(str);
 console.log(strNum);
 console.log(typeof strNum);
 
@@ -21,9 +21,8 @@ console.log(2 % 2);
 
 //String concatination
 let s1 = " Tahir",
-    s2 = "hello";
+  s2 = "hello";
 console.log(s2 + s1);
-
 
 console.log("1" + 2);
 console.log("1" + 2 + 2);
@@ -37,10 +36,8 @@ console.log(+true);
 console.log(+"");
 
 //increment
-let count = 100
-count++
-console.log(count);
+let count = 100;
+console.log(count++);
 
-let score = 200
-++score
-console.log(score);
+let score = 200;
+console.log(++score);

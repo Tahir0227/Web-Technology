@@ -11,143 +11,191 @@
 10. How to use reduce method or function in js
 */
 
-/******************* Activity 1 *******************/
-console.log("\nActivity 1:");
-//Simple function
+// ================= ACTIVITY 1 =================
+console.log("===== Activity 1 : Functions =====");
+document.writeln("<h3>Activity 1 : Functions</h3>");
+
+// Simple function
 function add1(a, b) {
   return a + b;
 }
-console.log(`5 + 2 : ${add1(5, 2)}`);
+console.log("5 + 2 =", add1(5, 2));
+document.writeln("5 + 2 = " + add1(5, 2) + "<br>");
 
-//Arrow function
+// Arrow function
 const add2 = (a, b) => a + b;
-console.log(`10 + 20 : ${add2(10, 20)}`);
+console.log("10 + 20 =", add2(10, 20));
+document.writeln("10 + 20 = " + add2(10, 20) + "<br><br>");
 
-/******************* Activity 2 *******************/
-console.log("\nActivity 2:");
-/*this is a special keyword that refers to the object that is executing the current function
-We use this when we want a function to work with its object's data*/
+// ================= ACTIVITY 2 =================
+console.log("\n===== Activity 2 : this Keyword =====");
+document.writeln("<h3>Activity 2 : this Keyword</h3>");
 
-//Regular functions get their own this
+// Regular function
 const user1 = {
   name: "Tahir",
   greet: function () {
-    console.log(`Hello ${this.name}`);
+    console.log("Hello " + this.name);
+    document.writeln("Regular Function → Hello " + this.name + "<br>");
   },
 };
 user1.greet();
 
-/*Arrow functions DO NOT have their own this,Because arrow function does not take calling object as this,
- They inherit this from their surrounding (parent) scope*/
+// Arrow function
 const user2 = {
   name: "Tahir",
   greet: () => {
-    console.log(`Hello ${this.name}`);
+    console.log("Hello " + this.name);
+    document.writeln("Arrow Function → Hello " + this.name + "<br>");
   },
 };
 user2.greet();
 
-/******************* Activity 3 *******************/
-console.log("\nActivity 3:");
+document.writeln("<br>");
+
+// ================= ACTIVITY 3 =================
+console.log("\n===== Activity 3 : Arrow Functions =====");
+document.writeln("<h3>Activity 3 : Arrow Functions</h3>");
+
 const isEven = (num1) => {
   return num1 % 2 == 0;
 };
-console.log(isEven(5));
-console.log(isEven(8));
+
+console.log("Is 5 Even:", isEven(5));
+console.log("Is 8 Even:", isEven(8));
+
+document.writeln("Is 5 Even: " + isEven(5) + "<br>");
+document.writeln("Is 8 Even: " + isEven(8) + "<br>");
 
 const square = (num2) => {
   return num2 * num2;
 };
-console.log(square(2));
-console.log(square(7));
 
-/******************* Activity 4 *******************/
-console.log("\nActivity 4:");
+console.log("Square of 2:", square(2));
+console.log("Square of 7:", square(7));
+
+document.writeln("Square of 2: " + square(2) + "<br>");
+document.writeln("Square of 7: " + square(7) + "<br><br>");
+
+// ================= ACTIVITY 4 =================
+console.log("\n===== Activity 4 : Switch Case =====");
+document.writeln("<h3>Activity 4 : Switch Case</h3>");
+
 let day = 2;
 
 switch (day) {
   case 1:
     console.log("Monday");
+    document.writeln("Monday<br>");
     break;
   case 2:
     console.log("Tuesday");
+    document.writeln("Tuesday<br>");
     break;
   case 3:
     console.log("Wednesday");
+    document.writeln("Wednesday<br>");
     break;
   case 4:
     console.log("Thursday");
+    document.writeln("Thursday<br>");
     break;
   case 5:
     console.log("Friday");
+    document.writeln("Friday<br>");
     break;
   case 6:
     console.log("Saturday");
+    document.writeln("Saturday<br>");
     break;
   case 7:
     console.log("Sunday");
+    document.writeln("Sunday<br>");
     break;
   default:
     console.log("Invalid day");
+    document.writeln("Invalid day<br>");
 }
+document.writeln("<br>");
 
-/******************* Activity 5 *******************/
-console.log("\nActivity 5:");
-// There are only 6 falsy values: false,null,undefined,0,"",NaN
-//Everything else is truthy
+// ================= ACTIVITY 5 =================
+console.log("\n===== Activity 5 : Truthy & Falsy =====");
+document.writeln("<h3>Activity 5 : Truthy & Falsy</h3>");
+
 let name = "";
 
 if (name) {
-  console.log(`${name}`);
+  console.log(name);
+  document.writeln(name + "<br>");
 } else {
   console.log("Name is empty");
+  document.writeln("Name is empty<br>");
 }
 
 let value = null;
 if (value) {
   console.log("Value exists");
+  document.writeln("Value exists<br>");
+} else {
+  document.writeln("Value is null (Falsy)<br>");
 }
 
-/******************* Activity 6 *******************/
-console.log("\nActivity 6:");
-// The ternary operator is a short form of if-else
-//condition ? valueIfTrue : valueIfFalse;
+document.writeln("<br>");
+
+// ================= ACTIVITY 6 =================
+console.log("\n===== Activity 6 : Ternary Operator =====");
+document.writeln("<h3>Activity 6 : Ternary Operator</h3>");
+
 let age = 18;
 let result = age >= 18 ? "Adult" : "Minor";
-console.log(result);
 
-/******************* Activity 7 *******************/
-console.log("\nActivity 7:");
+console.log("Result:", result);
+document.writeln("Result: " + result + "<br><br>");
+
+// ================= ACTIVITY 7 =================
+console.log("\n===== Activity 7 : Loop through Array =====");
+document.writeln("<h3>Activity 7 : Loop through Array</h3>");
+
 let fruits = ["Apple", "Banana", "Mango", "Watermelon"];
 
 for (let i = 0; i < fruits.length; i++) {
   console.log(fruits[i]);
+  document.writeln(fruits[i] + "<br>");
 }
+document.writeln("<br>");
 
-/******************* Activity 8 *******************/
-console.log("\nActivity 8:");
-//For in : return index
-//For of : return Values
+// ================= ACTIVITY 8 =================
+console.log("\n===== Activity 8 : for-in & for-of =====");
+document.writeln("<h3>Activity 8 : for-in & for-of</h3>");
+
 let colors = ["Red", "Blue", "Green"];
+
+document.writeln("for-in (Index):<br>");
 for (let index in colors) {
   console.log(index);
+  document.writeln(index + "<br>");
 }
 
+document.writeln("for-of (Values):<br>");
 for (let color of colors) {
   console.log(color);
+  document.writeln(color + "<br>");
 }
 
-/******************* Activity 9 *******************/
-console.log("\nActivity 9:");
-//map() is used to create a new array by changing each element of the original array
-//filter() is used to select some elements from an array based on a condition
+document.writeln("<br>");
+
+// ================= ACTIVITY 9 =================
+console.log("\n===== Activity 9 : map() & filter() =====");
+document.writeln("<h3>Activity 9 : map() & filter()</h3>");
 
 let numbers1 = [1, 2, 3, 4];
 let result2 = numbers1.map((num) => num * 2);
-console.log(result2);
+
+console.log("Map Result:", result2);
+document.writeln("Map Result: " + result2 + "<br>");
 
 let numbers2 = [1, 2, 3, 4, 5, 6];
 let evenNumbers = numbers2.filter((num) => num % 2 == 0);
-console.log(evenNumbers);
 
-/******************* Activity 10 *******************/
+console.log("Filtered Even Numbers:", evenNumbers);
+document.writeln("Filtered Even Numbers: " + evenNumbers + "<br>");
